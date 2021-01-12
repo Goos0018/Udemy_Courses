@@ -1,0 +1,21 @@
+  <div class="row">
+    <div class="col">
+      <button class="btn btn-success">New Recipe</button>
+    </div>
+  </div>
+  <div class="row my-2">
+    <div class="col">
+        <a href="#" class="" *ngFor="let recipe of recipes">
+          <div class="card p-2">
+            <div class="media">
+              <div class="media-body">
+                <h5>{{recipe.name}}</h5>
+                <p class="lead">{{recipe.description}}</p>
+              </div>
+              <img class="mx-2 img-fluid rounded-circle" src="{{recipe.imagePath}}" alt="{{recipe.name}}" style="max-height: 50px">
+            </div>
+          </div>
+        </a>
+      <app-recipe-item></app-recipe-item>
+    </div>
+  </div>
